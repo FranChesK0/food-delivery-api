@@ -7,13 +7,14 @@ license = "MIT"
 readme = "README.md"
 packages = [
   { "include" = "src", "from" = "food_api" },
-  { "include" = "tests", "from" = "food_api" }
+  { "include" = "tests", "from" = "food_api" },
 ]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 pydantic = "^2.10.5"
 pydantic-settings = "^2.7.1"
+ujson = "^5.10.0"
 
 
 [tool.poetry.group.dev]
@@ -24,6 +25,7 @@ black = "^24.10.0"
 flake8-pyproject = "^1.2.3"
 isort = "^5.13.2"
 mypy = "^1.14.1"
+types-ujson = "^5.10.0.20240515"
 
 
 [tool.black]
@@ -63,5 +65,5 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 packages = [
   { "include" = "src", "from" = "food_api" },
-  { "include" = "tests", "from" = "food_api" }
+  { "include" = "tests", "from" = "food_api" },
 ]
