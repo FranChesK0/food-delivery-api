@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     PORT: int = 8000
     DATABASE_URL: str = f"sqlite+aiosqlite:///{BASE_DIR}/data/food_delivery.db"
 
-    model_config = SettingsConfigDict(env_file=f"{BASE_DIR}/../.env")
+    model_config = SettingsConfigDict(env_file=f"{BASE_DIR}/.env")
 
 
 settings = Settings()
