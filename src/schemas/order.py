@@ -12,12 +12,14 @@ class OrderAddSchema(BaseModel):
         items (list[int]): List of menu item ids
         address (str): User address
         comment (str): User comment
+        status (OrderStatus): Order status
     """
 
     restaurant_id: int
     items: list[int]
     address: str
     comment: str = ""
+    status: OrderStatus = OrderStatus.CREATING
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -28,7 +30,6 @@ class OrderSchema(OrderAddSchema):
 
     Attributes:
         id (int): Order id
-        status (OrderStatus): Order status
         restaurant_id (int): Restaurant id
         items (list[int]): List of menu item ids
         address (str): User address
@@ -36,6 +37,5 @@ class OrderSchema(OrderAddSchema):
     """
 
     id: int
-    status: OrderStatus
 
     model_config = ConfigDict(from_attributes=True)
