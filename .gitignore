@@ -171,4 +171,4 @@ cython_debug/
 .pypirc
 
 # Database file
-./data/food_delivery.db
+data/*.db

@@ -13,7 +13,7 @@ router = APIRouter(prefix="/order", tags=["Orders"])
 async def create_order(order: OrderAddSchema, session: SessionDep) -> OrderSchema:
     order = await OrderRepository.add_one(order, session)
     update_status(
-        order.id, OrderStatus.COOKING, timedelta(seconds=20).total_seconds(), session
+        order.id, OrderStatus.COOKING, timedelta(seconds=10).total_seconds(), session
     )
     update_status(
         order.id, OrderStatus.DELIVERING, timedelta(minutes=20).total_seconds(), session
