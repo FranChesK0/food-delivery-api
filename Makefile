@@ -46,4 +46,4 @@ pc:
 	pre-commit run --all --hook-stage pre-push
 
 run:
-	python food_api/src/main.py
+	python src/main.py
