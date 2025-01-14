@@ -19,6 +19,7 @@ sqlalchemy = "^2.0.37"
 aiosqlite = "^0.20.0"
 fastapi = "^0.115.6"
 loguru = "^0.7.3"
+googlemaps = "^4.10.0"
 
 
 [tool.poetry.group.dev]

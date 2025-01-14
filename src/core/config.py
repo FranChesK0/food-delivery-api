@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
     DATABASE_URL: str = f"sqlite+aiosqlite:///{BASE_DIR}/data/food_delivery.db"
+    GOOGLE_API_KEY: str = "xxx"
 
     model_config = SettingsConfigDict(env_file=f"{BASE_DIR}/.env")
 
